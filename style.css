@@ -60,3 +60,20 @@ height: 50vh;
     padding: auto;
 
 }
+@media only screen and (max-width: 600px){
+    .firstnav{
+        width: auto;
+    }
+.grid{
+    margin: 0 auto;
+    width: 41%;
+    display: block;
+}
+.box{
+    margin-top: 10px;
+}
+.content .image {
+    height: 19vh;
+    background-size: cover;
+}
+}
