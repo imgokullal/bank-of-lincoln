@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background: #1A77F2 !important;
+    color: white;
+    height: 16vh;
+  
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 26px;
+}
+.header-child{
+    margin: 10px;
+}
+.firstnav{
+width: 20%;
+text-align: right;
+}
+.secondnav{
+    margin-right: 20px;
+}
+.secondnav i{
+    font-size: 32px;
+}
