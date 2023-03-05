@@ -43,3 +43,6 @@
     line-height: 28px;
 
 }
+.details p{
+    display: inline-block;
+}

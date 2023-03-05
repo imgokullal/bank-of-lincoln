@@ -13,6 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
   </head>
   <body>
     <header class="header">
@@ -26,14 +27,20 @@
       </div>
     </header>
     <div class="content">
-      <div class="image"></div>
-      <div class="boxes">
-        <div class="grid">
-          <div class="box"><a href="./withdraw.html">Withdraw Cash</a></div>
-          <div class="box"><a href="./deposit.html">Deposit Cash</a></div>
-          <div class="box"><a href="./transfer.html">Transfer Cash</a></div>
-          <div class="box"><a href="./details.html">Account Details</a></div>
-        </div>
+      <div class="form">
+        <form action="">
+          <div class="form-element">
+            <label for="">Balance</label><br />
+            <input type="text" class="form-label" value="66666" readonly />
+          </div>
+
+          <div class="form-element">
+            <label for="">Deposit Amount</label><br />
+            <input type="number" class="form-label" />
+          </div>
+          <input type="button" value="Withdraw" class="button button1" />
+          <a href="./index.html" class="button button2">Home</a>
+        </form>
       </div>
     </div>
   </body>
