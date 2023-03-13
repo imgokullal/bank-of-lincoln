@@ -1,3 +1,6 @@
+<?php
+include('./components/connections.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
