@@ -1,12 +1,6 @@
 <?php
-
+session_start();
 include('./components/connections.php');
-?>
-<?php
-if (!$_SESSION["username"]) {
-    header("Location: http://localhost/bank-of-lincoln/login.php");
-    echo '<script>alert("Could not be Registered")</script>';
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,10 +23,6 @@ if (!$_SESSION["username"]) {
             </div>
             <div class="secondnav header-child">
                 <i class="fas fa-user-circle"></i>
-                <div class="logout">
-
-                    <a href="./logout.php" class="logout_btn">Logout</a>
-                </div>
             </div>
         </div>
     </header>

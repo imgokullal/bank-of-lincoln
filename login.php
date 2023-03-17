@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('./components/header.php');
+include('./components/header_login.php');
 
 if (isset($_POST['submit'])) {
 
