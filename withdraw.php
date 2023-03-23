@@ -31,13 +31,16 @@ while ($row = $result->fetch_assoc()) {
 if (isset($_POST['submit'])) {
   $withdraw = $_POST['withdraw'];
   $balance = $curBalance - $withdraw;
-
-  $sql = "UPDATE users set balance='$balance' WHERE userName='$username'";
-  if (mysqli_query($conn, $sql)) {
-    echo '<script>alert("Money withdrawn")</script>';
-    header("Refresh:0");
+  if ($balance > 0) {
+    $sql = "UPDATE users set balance='$balance' WHERE userName='$username'";
+    if (mysqli_query($conn, $sql)) {
+      echo '<script>alert("Money withdrawn")</script>';
+      header("Refresh:0");
+    } else {
+      echo '<script>alert("Money not withdrawn")</script>';
+    }
   } else {
-    echo '<script>alert("Money not withdrawn")</script>';
+    echo '<script>alert("You dont have enough funds")</script>';
   }
 }
   ?>
