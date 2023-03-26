@@ -6,15 +6,19 @@ if (isset($_POST['submit'])) {
 
   $username = $_POST['username'];
   $password = $_POST['password'];
-
-  $sql = "SELECT * FROM users WHERE userName='$username' AND password= '$password'";
-  $result = mysqli_query($conn, $sql);
-  if (mysqli_num_rows($result) > 0) {
+  if ($username == 'bank' && $password == 'password') {
     $_SESSION["username"] = $username;
-    $_SESSION["password"] = $password;
-    header("Location: http://localhost/bank-of-lincoln/index.php");
+    header("Location: http://localhost/bank-of-lincoln/bank.php");
   } else {
-    echo '<script>alert("Username and Password does not match")</script>';
+    $sql = "SELECT * FROM users WHERE userName='$username' AND password= '$password'";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+      $_SESSION["username"] = $username;
+      $_SESSION["password"] = $password;
+      header("Location: http://localhost/bank-of-lincoln/index.php");
+    } else {
+      echo '<script>alert("Username and Password does not match")</script>';
+    }
   }
 }
 ?>

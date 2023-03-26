@@ -100,3 +100,18 @@ height: 50vh;
     background-size: cover;
 }
 }
+
+
+/* table */
+table{
+    width: auto;
+    margin: 
+    40px  auto;
+    box-shadow: 0px 0px 4px 0px;
+        
+}
+td, th{
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+}
